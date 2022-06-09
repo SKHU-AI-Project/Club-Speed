@@ -34,7 +34,7 @@ YOLOv4를 사용하여 골프채를 인식하고 스윙 동작에서 클럽헤�
  
  * * *
 
-### 최종결과
+### 좌표추출
 <img src="https://user-images.githubusercontent.com/51286325/172812835-f0d7620d-06f2-4b4d-83b5-5e501af51934.png" width="200px" height="400px" alt="lastOne"></img>
 <img src="https://user-images.githubusercontent.com/51286325/172813467-2f0ce6c9-197f-4b33-bbf0-12804a8f279a.png" width="200px" height="400px" alt="lastTwo"></img>
 <img src="https://user-images.githubusercontent.com/51286325/172813614-c4ae315d-a596-4a16-880a-356e8bd3ea00.png" width="200px" height="400px" alt="lastThree"></img>
