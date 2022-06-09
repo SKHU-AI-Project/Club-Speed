@@ -28,6 +28,6 @@ yolo v3를 사용하여 골프채를 인식하고 스윙 동작에서 클럽헤�
 - 🛠 Labeling
   - Github: <https://github.com/tzutalin/labelImg>
 
-- 👾 yolo v3
+- 👾 yolo v4
   - 출처: [medium 블로그 링크](https://medium.com/@quangnhatnguyenle/how-to-train-yolov3-on-google-colab-to-detect-custom-objects-e-g-gun-detection-d3a1ee43eda1)
   - Github: <https://github.com/AlexeyAB/darknet>
