@@ -54,10 +54,10 @@ def measure(file, slow):
 
     # 픽셀 길이 계산 후 실제 거리 반환
     distance = math.dist([int(headInfoOne[1]), int(headInfoOne[2])], [int(headInfoTwo[1]), int(headInfoTwo[2])])
-    realDistance = distance * correctionConstant
+    realDistance = distance * correctionConstant * 0.00001
 
     # 시간 계산 후 동영상의 배속 적용
-    time = (float(headInfoOne[5]) - float(headInfoTwo[5]))
+    time = (float(headInfoOne[5]) - float(headInfoTwo[5])) / 3600
 
     # 속도 = 거리 / 시간
     speed = realDistance / time * slow
