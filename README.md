@@ -28,7 +28,7 @@ Original file is located at
     https://colab.research.google.com/drive/1MVsvHKhLyEP8SFAYjNZZxfmvC8uwQC9g
 """
 
-!git clone https://github.com/AlexeyAB/darknet #our git
+!git clone https://github.com/SKHU-AI-Project/Club-Speed.git #our git
 
 # Commented out IPython magic to ensure Python compatibility.
 # %cd darknet
