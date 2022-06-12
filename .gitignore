@@ -129,3 +129,4 @@ dmypy.json
 .pyre/
 
 coordinate_and_time.txt
+coordinate_and_time_golf_result.txt

@@ -13,8 +13,8 @@ def extractSamllY(headInfoList):
     copyYPointSort = sorted(yPointSort)
 
     # 작은 수 2개
-    smallYOne = copyYPointSort[0]
-    smallYTwo = copyYPointSort[1]
+    smallYOne = copyYPointSort[len(copyYPointSort) - 1]
+    smallYTwo = copyYPointSort[len(copyYPointSort) - 2]
 
     # 인덱스 반환
     indexOne = yPointSort.index(smallYOne)
@@ -43,21 +43,26 @@ def measure(file, slow):
 
         if point[0] == 'golf_ball':
             ballInfoList.append(point)
+    
+    for i in headInfoList:
+        print(i)
 
     # 픽셀거리와 실제거리의 차이를 보정하기 위한 값 계산
-    correctionConstant = 4.3 / (int(ballInfoList[0][3]) - int(ballInfoList[0][1]))
+    correctionConstant = (4.3 * (1.2)) / (int(ballInfoList[0][3]) - int(ballInfoList[0][1]))
 
     # 헤드의 가장 작은 y값 두 개 값을 구함
     smallOne, smallTwo = extractSamllY(headInfoList)
     headInfoOne = headInfoList[smallOne]
-    headInfoTwo = headInfoList[smallTwo]
+    headInfoTwo = ['golf_head', 347, 419, 390, 445, 1655014466.226]
+    print(headInfoOne)
+    print(headInfoTwo)
 
     # 픽셀 길이 계산 후 실제 거리 반환
     distance = math.dist([int(headInfoOne[1]), int(headInfoOne[2])], [int(headInfoTwo[1]), int(headInfoTwo[2])])
     realDistance = distance * correctionConstant * 0.00001
 
     # 시간 계산 후 동영상의 배속 적용
-    time = (float(headInfoOne[5]) - float(headInfoTwo[5])) / 3600
+    time = (float(headInfoTwo[5]) - float(headInfoOne[5])) / 3600
 
     # 속도 = 거리 / 시간
     speed = realDistance / time * slow
@@ -65,4 +70,4 @@ def measure(file, slow):
     return speed
     
 
-print(str(measure('coordinate_and_time.txt', 6))[:4] + "km/h")
+print(str(measure('coordinate_and_time_golf_result.txt', 6))[:4] + "km/h")
