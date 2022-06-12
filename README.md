@@ -69,3 +69,4 @@ Original file is located at
 ### Contect member  
 박결: gyul611@gmail.com  
 허지영 : jiyoungmerong@gmail.com
+강준혁 : kanjun5023@gmail.com
