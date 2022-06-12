@@ -40,6 +40,9 @@ Original file is located at
 !wget —no-check-certificate 'https://docs.google.com/uc?export=download&id=1c2ebtK5_4V5yvcflYA98H30Og4Mw1StH' -O test.mp4
 
 !./darknet detector demo golf_cfg/golf_custom.data golf_cfg/golf_custom.cfg golf_custom_10000.weights -dont_show ./test.mp4 -i 0 -out_filename ./results.avi
+
+속도 측정
+python3 measure.py
 ```
 
 ### 사용 기술
@@ -70,3 +73,4 @@ Original file is located at
 박결: gyul611@gmail.com  
 허지영 : jiyoungmerong@gmail.com  
 강준혁:  kanjun5023@gmail.com  
+이승헌: seungheon329@gmail.com  
