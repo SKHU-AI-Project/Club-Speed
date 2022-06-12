@@ -16,11 +16,7 @@ def extractSamllY(headInfoList):
     smallYOne = copyYPointSort[len(copyYPointSort) - 1]
     smallYTwo = copyYPointSort[len(copyYPointSort) - 2]
 
-    # 인덱스 반환
-    indexOne = yPointSort.index(smallYOne)
-    indexTwo = yPointSort.index(smallYTwo)
-
-    return (indexOne, indexTwo)
+    return (smallYOne, smallYTwo)
     
 
 # 좌표값이 담긴 파일과 해당 동영상의 fps
@@ -43,19 +39,24 @@ def measure(file, slow):
 
         if point[0] == 'golf_ball':
             ballInfoList.append(point)
-    
-    for i in headInfoList:
-        print(i)
 
     # 픽셀거리와 실제거리의 차이를 보정하기 위한 값 계산
     correctionConstant = (4.3 * (1.2)) / (int(ballInfoList[0][3]) - int(ballInfoList[0][1]))
 
     # 헤드의 가장 작은 y값 두 개 값을 구함
     smallOne, smallTwo = extractSamllY(headInfoList)
-    headInfoOne = headInfoList[smallOne]
-    headInfoTwo = ['golf_head', 347, 419, 390, 445, 1655014466.226]
-    print(headInfoOne)
-    print(headInfoTwo)
+    headInfoOne = []
+    headInfoTwo = []
+    smallHeadList = []
+    if smallOne == smallTwo:
+        for i in headInfoList:
+            if int(i[4]) == smallOne:
+                smallHeadList.append(i)
+        headInfoOne = smallHeadList[0]
+        headInfoTwo = smallHeadList[1]
+    else :
+        headInfoOne = headInfoList.index(smallOne)
+        headInfoTwo = headInfoList.index(smallTwo)
 
     # 픽셀 길이 계산 후 실제 거리 반환
     distance = math.dist([int(headInfoOne[1]), int(headInfoOne[2])], [int(headInfoTwo[1]), int(headInfoTwo[2])])
