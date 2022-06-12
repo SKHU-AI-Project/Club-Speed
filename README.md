@@ -68,3 +68,4 @@ Original file is located at
 
 ### Contect member  
 박결: gyul611@gmail.com
+허지영 : jiyoungmerong@gmail.com
